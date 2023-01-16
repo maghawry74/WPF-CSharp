@@ -1,0 +1,49 @@
+﻿<Window x:Class="Bouns.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bouns"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border BorderThickness="5">
+            <TextBox x:Name="mainTxt" TextWrapping="Wrap">Welcome To Main Text Box.</TextBox>
+        </Border>
+        <StackPanel Grid.Row="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Click="SetText_Click" FontWeight="Bold" Width="80" Padding="5" Margin="0 5 5 5">Set Text</Button>
+                <Button Click="SelectAll_Click" FontWeight="Bold" Width="80" Padding="5" Margin="0 5 5 5">Selecte All</Button>
+                <Button Click="Clear_Click" FontWeight="Bold" Width="80" Padding="5" Margin="0 5 5 5">Clear</Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Click="Prepend_Click" FontWeight="Bold" Width="80" Padding="5" Margin="0 5 5 5">Prepend</Button>
+                <Button Click="Insert_Click" FontWeight="Bold" Width="80" Padding="5" Margin="0 5 5 5">Insert</Button>
+                <Button Click="Append_Click" FontWeight="Bold" Width="80" Padding="5" Margin="0 5 5 5">Append</Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Click="Cut_Click" FontWeight="Bold" Width="80" Padding="5" Margin="0 5 5 5">Cut</Button>
+                <Button Click="Paste_Click" FontWeight="Bold" Width="80" Padding="5" Margin="0 5 5 5">Paste</Button>
+                <Button Click="Undo_Click" FontWeight="Bold" Width="80" Padding="5" Margin="0 5 5 5">Undo</Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <RadioButton Checked="ChangeAccess" x:Name="editable" FontWeight="Bold" Margin="0 5 10 5">Editable</RadioButton>
+            <RadioButton Checked="ChangeAccess" FontWeight="Bold" Margin="0 5 10 5">Read Only</RadioButton>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+            <RadioButton Checked="TextDirection" x:Name="left" FontWeight="Bold" Margin="0 5 10 5">Left</RadioButton>
+            <RadioButton Checked="TextDirection" FontWeight="Bold" Margin="0 5 10 5">Center</RadioButton>
+            <RadioButton Checked="TextDirection" FontWeight="Bold" Margin="0 5 10 5">Right</RadioButton>
+        </StackPanel>
+    </Grid>
+</Window>
