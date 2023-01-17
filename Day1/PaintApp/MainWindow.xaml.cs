@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using System;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +21,7 @@ namespace Day1
             this.ink.IsChecked = true;
             this.normalBrush.IsChecked = true;
             this.ellipse.IsChecked = true;
+
         }
 
         private void ChangeColor(object sender, RoutedEventArgs e)
@@ -45,35 +47,13 @@ namespace Day1
         private void ModeChange(object sender, RoutedEventArgs e)
         {
             RadioButton? Mode = sender as RadioButton;
-            switch (Mode?.Content.ToString())
-            {
-                case "Ink":
-                    this.Drawer.EditingMode = InkCanvasEditingMode.Ink;
-                    break;
-                case "Select":
-                    this.Drawer.EditingMode = InkCanvasEditingMode.Select;
-                    break;
-                case "Erase":
-                    this.Drawer.EditingMode = InkCanvasEditingMode.EraseByPoint;
-                    break;
-                case "Erase By Strock":
-                    this.Drawer.EditingMode = InkCanvasEditingMode.EraseByStroke;
-                    break;
-            }
+            this.Drawer.EditingMode = (InkCanvasEditingMode)Enum.Parse(typeof(InkCanvasEditingMode), Mode.Content.ToString());
         }
 
         private void ShapeChange(object sender, RoutedEventArgs e)
         {
             RadioButton? Shape = sender as RadioButton;
-            switch (Shape?.Content.ToString())
-            {
-                case "Ellipse":
-                    this.Drawer.DefaultDrawingAttributes.StylusTip = (StylusTip)1;
-                    break;
-                case "Rectangle":
-                    this.Drawer.DefaultDrawingAttributes.StylusTip = 0;
-                    break;
-            }
+            this.Drawer.DefaultDrawingAttributes.StylusTip = (Shape?.Content.ToString() == "Ellipse") ? (StylusTip)1 : 0;
         }
 
         private void SizeChange(object sender, RoutedEventArgs e)
@@ -151,7 +131,5 @@ namespace Day1
         {
             this.Drawer.CutSelection();
         }
-
-
     }
 }

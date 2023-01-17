@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Day1"
         mc:Ignorable="d"
-        Title="Paint" Height="450" Width="auto" x:Name="main" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen">
+        Title="Paint"  Height="450" Width="650" x:Name="main" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -15,38 +15,38 @@
         <Border Background="Black" BorderThickness="10">
             <InkCanvas x:Name="Drawer"  ></InkCanvas>
         </Border>
-        <StackPanel Grid.Row="1" Orientation="Horizontal" >
-            <GroupBox Header="Colors" Margin="5">
-                <StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <GroupBox Header="Colors" Margin="5" BorderThickness="3">
+                <StackPanel VerticalAlignment="Center" Margin="5 0 5 0">
                     <RadioButton x:Name="red" Checked="ChangeColor" >Red</RadioButton>
                     <RadioButton Checked="ChangeColor">Green</RadioButton>
                     <RadioButton Checked="ChangeColor">Magenta</RadioButton>
                     <RadioButton Checked="ChangeColor">Blue</RadioButton>
                 </StackPanel>
             </GroupBox>
-            <GroupBox Header="Modes" Margin="5">
-                <StackPanel>
+            <GroupBox Header="Modes" Margin="5" BorderThickness="3">
+                <StackPanel VerticalAlignment="Center" Margin="5 0 5 0">
                     <RadioButton x:Name="ink" Checked="ModeChange">Ink</RadioButton>
                     <RadioButton Checked="ModeChange">Select</RadioButton>
-                    <RadioButton Checked="ModeChange">Erase</RadioButton>
-                    <RadioButton Checked="ModeChange">Erase By Strock</RadioButton>
+                    <RadioButton Checked="ModeChange">EraseByPoint</RadioButton>
+                    <RadioButton Checked="ModeChange">EraseByStroke</RadioButton>
                 </StackPanel>
             </GroupBox>
-            <GroupBox Header="Drawing Shape" Margin="5">
-                <StackPanel>
+            <GroupBox Header="Drawing Shape" Margin="5" BorderThickness="3">
+                <StackPanel VerticalAlignment="Center" Margin="5 0 5 0">
                     <RadioButton x:Name="ellipse" Checked="ShapeChange">Ellipse</RadioButton>
                     <RadioButton Checked="ShapeChange">Rectangle</RadioButton>
                 </StackPanel>
             </GroupBox>
-            <GroupBox Header="Brush Size" Margin="5">
-                <StackPanel>
+            <GroupBox Header="Brush Size" Margin="5" BorderThickness="3">
+                <StackPanel VerticalAlignment="Center" Margin="5 0 5 0">
                     <RadioButton  Checked="SizeChange">Small</RadioButton>
                     <RadioButton x:Name="normalBrush" Checked="SizeChange">Normal</RadioButton>
                     <RadioButton Checked="SizeChange">Large</RadioButton>
                 </StackPanel>
             </GroupBox>
-            <GroupBox Header="File" Margin="5">
-                <Grid VerticalAlignment="Center">
+            <GroupBox Header="File" Margin="5" BorderThickness="3">
+                <Grid VerticalAlignment="Center" Margin="5 0 5 0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
@@ -66,5 +66,4 @@
             </GroupBox>
         </StackPanel>
     </Grid>
-
 </Window>
