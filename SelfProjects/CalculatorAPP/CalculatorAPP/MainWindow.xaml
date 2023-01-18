@@ -1,0 +1,197 @@
+﻿<Window x:Class="CalculatorAPP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculatorAPP"
+        mc:Ignorable="d"
+        Title="Calculator" Height="525" Width="350">
+    <Window.Resources>
+        <Style  x:Key="button">
+            <Setter Property="Button.Margin" Value="5"></Setter>
+            <Setter Property="Button.FontSize" Value="25"></Setter>
+            <Setter Property="Button.Background" Value="#444444"></Setter>
+            <Setter Property="Button.Foreground" Value="White"></Setter>
+        </Style>
+        <Style x:Key="operationBtn" BasedOn="{StaticResource ResourceKey=button}">
+            <Setter  Property="Button.Background" Value="Orange"></Setter>
+            <Setter Property="Button.Margin" Value="5"></Setter>
+            <Setter Property="Button.FontSize" Value="15"></Setter>
+            <Setter Property="Button.FontSize" Value="35"></Setter>
+
+        </Style>
+    </Window.Resources>
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="0" 
+               Grid.ColumnSpan="4"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Right"
+               FontSize="60"
+               Name="resultLabel"
+               />
+        <Button 
+            Content="AC"
+            Grid.Row="1"
+            Name="acBtn"
+            Click="acBtn_Click"
+            Style="{StaticResource ResourceKey=button}"
+            />
+        <Button 
+            Content="7"
+            Grid.Row="2"
+            Name="sevenBtn"
+            Style="{StaticResource ResourceKey=button}"
+            Click="numberBtn_Click"
+            />
+        <Button 
+            Content="4"
+            Grid.Row="3"
+            Name="fourbtn"
+            Style="{StaticResource ResourceKey=button}"
+            Click="numberBtn_Click"
+            />
+        <Button 
+            Content="1"
+            Grid.Row="4"
+            Name="onebtn"
+            Style="{StaticResource ResourceKey=button}"
+            Click="numberBtn_Click"
+            />
+        <Button 
+            Content="0"
+            Grid.Row="5"
+            Grid.ColumnSpan="2"
+            Name="zeroBtn"
+            Style="{StaticResource ResourceKey=button}"
+            Click="numberBtn_Click"
+            />
+        <Button 
+            Content="+/-"
+            Grid.Row="1"
+            Grid.Column="1"
+            Name="positiveBtn"
+            Style="{StaticResource ResourceKey=button}"
+            Click="positiveBtn_Click"
+            />
+        <Button 
+            Content="8"
+            Grid.Row="2"
+            Grid.Column="1"
+            Name="eightBtn"
+            Style="{StaticResource ResourceKey=button}"
+            Click="numberBtn_Click"
+            />
+        <Button 
+            Content="5"
+            Grid.Row="3"
+            Grid.Column="1"
+            Name="fiveBtn"
+            Style="{StaticResource ResourceKey=button}"
+            Click="numberBtn_Click"
+            />
+        <Button 
+            Content="2"
+            Grid.Row="4"
+            Grid.Column="1"
+            Name="twoBtn"
+            Style="{StaticResource ResourceKey=button}"
+            Click="numberBtn_Click"
+            />
+
+        <Button 
+            Content="%"
+            Grid.Row="1"
+            Grid.Column="2"
+            Name="percentBtn"
+            Style="{StaticResource ResourceKey=button}"
+            Click="percentBtn_Click"
+            />
+        <Button 
+            Content="9"
+            Grid.Row="2"
+            Grid.Column="2"
+            Name="nineBtn"
+            Style="{StaticResource ResourceKey=button}"
+            Click="numberBtn_Click"
+            />
+        <Button 
+            Content="6"
+            Grid.Row="3"
+            Grid.Column="2"
+            Name="sixBtn"
+            Style="{StaticResource ResourceKey=button}"
+            Click="numberBtn_Click"
+            />
+        <Button 
+            Content="3"
+            Grid.Row="4"
+            Grid.Column="2"
+            Name="threeBtn"
+            Style="{StaticResource ResourceKey=button}"
+            Click="numberBtn_Click"
+            />
+        <Button 
+            Content="."
+            Grid.Row="5"
+            Grid.Column="2"
+            Name="dotBtn"
+            Style="{StaticResource ResourceKey=button}"
+            Click="dotBtn_Click"
+            />
+        <Button 
+            Content="/"
+            Grid.Row="1"
+            Grid.Column="3"
+            Name="divideBtn"
+            Click="operationBtn_Click"
+            Style="{StaticResource ResourceKey=operationBtn}"
+            />
+        <Button 
+            Content="*"
+            Grid.Row="2"
+            Grid.Column="3"
+            Name="mulBtn"
+            Click="operationBtn_Click"
+            Style="{StaticResource ResourceKey=operationBtn}"
+            />
+        <Button 
+            Content="-"
+            Grid.Row="3"
+            Grid.Column="3"
+            Name="minusBtn"
+            Click="operationBtn_Click"
+            Style="{StaticResource ResourceKey=operationBtn}"
+            
+            />
+        <Button 
+            Content="+"
+            Grid.Row="4"
+            Grid.Column="3"
+            Name="plusBtn"
+            Style="{StaticResource ResourceKey=operationBtn}"
+            Click="operationBtn_Click"
+            />
+        <Button 
+            Content="="
+            Grid.Row="5"
+            Grid.Column="3"
+            Name="equalBtn"
+            Style="{StaticResource ResourceKey=operationBtn}"
+            Click="equalBtn_Click"
+            />
+    </Grid>
+</Window>
