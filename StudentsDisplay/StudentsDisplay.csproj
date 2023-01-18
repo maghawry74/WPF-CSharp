@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="imgs\Ahmed.png" />
+    <None Remove="imgs\alaa.png" />
+    <None Remove="imgs\Amr.png" />
+    <None Remove="imgs\assem.png" />
+    <None Remove="imgs\Eslam.png" />
+    <None Remove="imgs\Kareem.png" />
+    <None Remove="imgs\maghawry.png" />
+    <None Remove="imgs\Mahmoud ali.png" />
+    <None Remove="imgs\Mostafa.png" />
+    <None Remove="imgs\Okba.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="imgs\Mostafa.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="imgs\Ahmed.png" />
+    <Resource Include="imgs\alaa.png" />
+    <Resource Include="imgs\Amr.png" />
+    <Resource Include="imgs\assem.png" />
+    <Resource Include="imgs\Eslam.png" />
+    <Resource Include="imgs\Kareem.png" />
+    <Resource Include="imgs\maghawry.png" />
+    <Resource Include="imgs\Mahmoud ali.png" />
+    <Resource Include="imgs\Okba.png" />
+  </ItemGroup>
+
+</Project>

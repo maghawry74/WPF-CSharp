@@ -54,9 +54,8 @@ namespace Bouns
         {
             if (IsEditable())
             {
-                string temp = mainTxt.Text;
-                mainTxt.Clear();
-                mainTxt.Text = $"***inserted  text * ** {temp}";
+
+                mainTxt.Text = mainTxt.Text.Insert(mainTxt.SelectionStart, "***inserted  text * **");
             }
         }
         private void Append_Click(object sender, RoutedEventArgs e)
