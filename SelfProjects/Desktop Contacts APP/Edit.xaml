@@ -1,0 +1,31 @@
+﻿<Window x:Class="Desktop_Contacts_APP.Edit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Desktop_Contacts_APP"
+        mc:Ignorable="d"
+        Title="Edit" Height="300" Width="300" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="10 20 "></Setter>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="15 10"></Setter>
+            <Setter Property="Margin" Value="15 10"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <TextBox Name="txt_name"></TextBox>
+            <TextBox Name="txt_email"></TextBox>
+            <TextBox Name="txt_phone"></TextBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Click="deleteBtn" Background="Red">Delete</Button>
+                <Button Click="updateBtn" Background="DimGray">Update</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
